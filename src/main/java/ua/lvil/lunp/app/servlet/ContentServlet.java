@@ -17,8 +17,8 @@ public class ContentServlet extends HttpServlet {
 		int tid = Integer.valueOf(request.getParameter("tid"));
 		Topic topic = new TopicDao().findById(tid);
 		Content content = new ContentDao().findContentByTopicId(tid);
-		request.setAttribute("topic", topic);
-		request.setAttribute("content", content);
+		request.setAttribute("topic", topic.getName());
+		request.setAttribute("content", content.getText());
 		request.getRequestDispatcher("learn.jsp").forward(request, response);
 	}
 
