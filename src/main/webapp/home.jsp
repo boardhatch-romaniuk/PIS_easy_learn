@@ -12,8 +12,8 @@
 <body>
 	<header class="site_header">
         <div class="container">
-        <div class="logo">
-            <a href="/">
+        <div>
+            <a class="logo" href="/">
                 EasyLearn
             </a>
         </div>
@@ -28,15 +28,14 @@
         <div class="container">
         <section class="subjects">
             <div>
-                <a href="topics?id=1">Java</a>
                 <div>
                     <c:forEach var="el" items="${list}">
+                        <div>
                         <div class="fblock">
-                        <div class="mg">
                         <a href="topics?sid=${el.id}">
                             <img src="${el.img}" alt="" width='${el.width}' height='${el.height}'/>
                         </a>
-                            <p>
+                            <p class="pr">
                                 ${el.description}
                             </p>
                         </div>

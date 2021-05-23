@@ -8,16 +8,6 @@
 	<display-name>PIS_easy_learn</display-name>
 	
 	<servlet>
-		<servlet-name>Root</servlet-name>
-		<servlet-class>ua.lvil.lunp.app.servlet.RootServlet</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>Root</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>Home</servlet-name>
 		<servlet-class>ua.lvil.lunp.app.servlet.HomeServlet</servlet-class>
 	</servlet>
