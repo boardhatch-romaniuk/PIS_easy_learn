@@ -8,7 +8,7 @@
 <body>
     
     <script>
-        let attr = '${param}';
+        let attr = `${param}`;
 
         console.log(attr);
     </script>
