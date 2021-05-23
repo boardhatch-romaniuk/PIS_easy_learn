@@ -42,8 +42,8 @@ public class TopicDao {
 		return list;
 	}
 	
-	public Topic findTopicBySubjectId(int subjectId) {
-		Topic topic = new Topic();
+	public List<Topic> findTopicBySubjectId(int subjectId) {
+		List<Topic> list = new ArrayList<>();
 		
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -51,13 +51,15 @@ public class TopicDao {
 		
 		try {
 			con = DBManager.getInstance().getConnection();
-			ps = con.prepareStatement(Constants.FIND_TOPIC_BY_SUBJECT_ID);
+			ps = con.prepareStatement(Constants.FIND_TOPICS_BY_SUBJECT_ID);
 			ps.setInt(1, subjectId);
 			rs = ps.executeQuery();
-			if (rs.next()) {
+			while (rs.next()) {
+				Topic topic = new Topic();
 				topic.setId(rs.getInt(1));
 				topic.setSubjectId(rs.getInt(2));
 				topic.setName(rs.getString(3));
+				list.add(topic);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -66,6 +68,6 @@ public class TopicDao {
 			DBManager.getInstance().commitAndClose(con);
 		}
 		
-		return topic;
+		return list;
 	}
 }
