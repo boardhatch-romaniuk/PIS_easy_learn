@@ -9,31 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ua.lvil.lunp.app.bean.Bean;
+import ua.lvil.lunp.app.db.dao.SubjectDao;
+import ua.lvil.lunp.app.entities.Subject;
 
-public class ByeServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Bean> list = new ArrayList<Bean>();
-		Bean b1 = new Bean();
-		Bean b2 = new Bean();
-		b1.setId(1);
-		b2.setId(2);
-		b1.setStr("First bean");
-		b2.setStr("Second bean");
-		
-		list.add(b1);
-		list.add(b2);
-		
+		List<Subject> list;
+		list = new SubjectDao().findAllSubjects();
 		request.setAttribute("list", list);
-		
-		
-		request.getRequestDispatcher("/bye.jsp").forward(request, response);
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		doGet(request, response);
 	}
 
