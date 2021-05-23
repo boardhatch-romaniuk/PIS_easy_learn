@@ -12,8 +12,8 @@ public class HelloServlet extends HttpServlet {
 	
      
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("param", "Hello on hello page");
-		request.getRequestDispatcher("/hello.jsp").forward(request, response);
+		request.setAttribute("name", "Vova");
+		request.getRequestDispatcher("hello.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

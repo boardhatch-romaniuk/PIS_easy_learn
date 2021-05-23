@@ -6,7 +6,7 @@
 <title>Index jsp</title>
 </head>
 <body>
-	<p>Text: ${param}</p>
+	<p>Hello: ${name}</p>
     Hello jsp
 
 </body>
