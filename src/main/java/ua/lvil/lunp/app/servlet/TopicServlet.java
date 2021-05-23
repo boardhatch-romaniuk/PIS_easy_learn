@@ -18,7 +18,7 @@ public class TopicServlet extends HttpServlet {
 		int sid = Integer.valueOf(request.getParameter("sid"));
 		List<Topic> list = new TopicDao().findTopicBySubjectId(sid);
 		String sname = new SubjectDao().findSubNameBySubId(sid);
-
+		System.out.println(sname);
 		request.setAttribute("list", list);
 		request.setAttribute("sname", sname);
 		request.getRequestDispatcher("topics.jsp").forward(request, response);

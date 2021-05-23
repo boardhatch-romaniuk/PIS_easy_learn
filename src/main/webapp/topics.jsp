@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="page">
     <header class="site_header">
         <div class="container">
         <div>
@@ -27,14 +26,22 @@
     </header> 
 	<section>
     <div class="container">
-        <h1>${sname}</h1>
+        <h1 class="sname">${sname}</h1>
+    <section class="topics">
+        <div>
         <c:forEach var="el" items="${list}">
-            <c:out value="${el.id}"/>
+            <div class="tblock">
+        <a class="tname" href="learn?tid=${el.id}">
+            <span class="tname">
             <c:out value="${el.name}"/>
+            </span>
+        </a>
             <br>
-        </c:forEach>   
+        </div>
+        </c:forEach>  
+</div>
+    </section>
     </div>   
     </section>
-</section>
 </body>
 </html>
