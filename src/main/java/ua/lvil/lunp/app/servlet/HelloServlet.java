@@ -7,14 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class HomeServlet extends HttpServlet {
+public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
      
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Cookie c = new Cookie("param", "Hello from cookie");
-		response.addCookie(c);
-		request.getRequestDispatcher("/hello.html").forward(request, response);
+		request.setAttribute("param", "Hello on hello page");
+		request.getRequestDispatcher("/hello.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
