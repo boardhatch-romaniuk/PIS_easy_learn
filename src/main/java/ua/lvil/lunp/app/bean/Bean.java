@@ -21,5 +21,13 @@ public class Bean {
 	public void setStr(String str) {
 		this.str = str;
 	}
+
+	@Override
+	public String toString() {
+		return "Bean [id=" + id + ", str=" + str + "]";
+	}
+	
+	
+	
 	
 }
