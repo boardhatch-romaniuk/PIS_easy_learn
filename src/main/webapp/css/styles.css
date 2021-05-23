@@ -4,6 +4,7 @@ html, * { margin: 0; padding: 0; }
 html, body {
   height: 100%;
   margin: 0;
+  background-color: red;
 }
 
 /* Site structure CSS */
@@ -35,6 +36,7 @@ button {
 .site_header { 
     padding: 15px 0px; background-color: #0b4c6a; 
 }
+
 .search_bar { 
      margin-right: 10px;
       position: relative; 
@@ -52,6 +54,7 @@ button {
         border: 0px; 
         background-color: #083b52; 
         width: 430px; 
+    outline: none;
 }
 .search_bar::-webkit-input-placeholder {
     color: #FFF;
@@ -91,7 +94,16 @@ button {
     
     border: 3px solid rgb(194, 182, 182);
     border-radius: 25px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .pr {
     width: 50%;
+}
+.logo{
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    margin-left: 2px;
 }
