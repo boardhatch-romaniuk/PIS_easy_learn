@@ -2,6 +2,7 @@ package ua.lvil.lunp.app.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,8 +12,9 @@ public class HomeServlet extends HttpServlet {
 	
      
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("param", "Hello world");
-		request.getRequestDispatcher("/index.html").forward(request, response);
+		Cookie c = new Cookie("param", "Hello from cookie");
+		response.addCookie(c);
+		request.getRequestDispatcher("/hello.html").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
