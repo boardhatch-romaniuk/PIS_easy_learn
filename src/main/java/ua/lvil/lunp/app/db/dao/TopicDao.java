@@ -13,6 +13,32 @@ import ua.lvil.lunp.app.db.util.DBManager;
 import ua.lvil.lunp.app.entities.Topic;
 
 public class TopicDao {
+	
+	public Topic findById(int tid) {
+		Topic topic = new Topic();
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			con = DBManager.getInstance().getConnection();
+			ps = con.prepareStatement(Constants.FIND_TOPIC_BY_ID);
+			ps.setInt(1, tid);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				topic.setId(rs.getInt(1));
+				topic.setSubjectId(rs.getInt(2));
+				topic.setName(rs.getString(3));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			DBManager.getInstance().rollbackAndClose(con);
+		} finally {
+			DBManager.getInstance().commitAndClose(con);
+		}
+		
+		return topic;
+	}
+	
 	public List<Topic> findAllTopics() {
 		List<Topic> list = new ArrayList<>();
 		

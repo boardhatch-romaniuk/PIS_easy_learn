@@ -8,6 +8,16 @@
 	<display-name>PIS_easy_learn</display-name>
 	
 	<servlet>
+		<servlet-name>Content</servlet-name>
+		<servlet-class>ua.lvil.lunp.app.servlet.ContentServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>Content</servlet-name>
+		<url-pattern>/learn</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
 		<servlet-name>Topic</servlet-name>
 		<servlet-class>ua.lvil.lunp.app.servlet.TopicServlet</servlet-class>
 	</servlet>
