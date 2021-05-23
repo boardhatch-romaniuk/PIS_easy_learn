@@ -6,7 +6,7 @@
 <title>Index jsp</title>
 </head>
 <body>
-    
+    Hello jsp
     <script>
         let attr = `${param}`;
 
