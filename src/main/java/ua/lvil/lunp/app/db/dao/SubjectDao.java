@@ -28,10 +28,7 @@ public class SubjectDao {
 				sb.setId(rs.getInt(1));
 				sb.setName(rs.getString(2));
 				sb.setDescription(rs.getString(3));
-				sb.setImg(rs.getString(4));
-				sb.setWidth(rs.getInt(5));
-				sb.setHeight(rs.getInt(6));
-				list.add(sb);	
+				list.add(sb);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
