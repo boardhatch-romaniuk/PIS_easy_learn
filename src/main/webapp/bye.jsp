@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Index jsp</title>
+<title>Bye jsp</title>
 </head>
 <body>
-	<p>Text: ${param}</p>
-    Hello jsp
+
+    Hello from bye jsp
 
 </body>
 </html>
