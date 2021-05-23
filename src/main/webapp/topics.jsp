@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Index jsp</title>
+<title>Topics</title>
 </head>
 <body>
-	<c:forEach var="el" items="${list}">
-    	<c:out value="${el.id }"/>
-    	<c:out value="${el.name }"/>
-    </c:forEach>
-    
+	<section>
+        <c:forEach var="el" items="${list}">
+            <c:out value="${el.id}"/>
+            <c:out value="${el.str}"/>
+            <br>
+        </c:forEach>      
+    </section>
 </body>
 </html>

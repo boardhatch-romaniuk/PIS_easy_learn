@@ -1,0 +1,97 @@
+
+html, * { margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Site structure CSS */
+body {
+	background-color: #f4f8fb;
+	color: #3b3b3b;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: 'Newsreader', serif;
+}
+div { box-sizing: border-box; }
+
+
+p { margin-bottom: 24px; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin-bottom: 15px; }
+
+.container {
+	width: 1200px; 
+	margin: 0 auto;
+}
+button {
+     outline: none; 
+}
+.site_header { 
+    padding: 15px 0px; background-color: #0b4c6a; 
+}
+.search_bar { 
+     margin-right: 10px;
+      position: relative; 
+      overflow: hidden; 
+      -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     border-radius: 4px; 
+    height: 34px; 
+    padding: 2px 10px; 
+    color: #FFF; 
+    padding-right: 55px; 
+    -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px; 
+        border: 0px; 
+        background-color: #083b52; 
+        width: 430px; 
+}
+.search_bar::-webkit-input-placeholder {
+    color: #FFF;
+    
+  }
+
+
+.head_nav { 
+    display: inline-block; 
+    margin: 0; 
+    padding: 0;
+    vertical-align: middle; 
+    margin: 5px 4px;
+    
+}
+
+.loginBtn { 
+    border: 1px solid #177aaa; color: #FFF; padding: 8px 15px; line-height: 34px; -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; 
+    padding: 8px 10px;
+    text-decoration: none;
+}
+.loginBtn:hover { 
+    background-color: #0e94d5; 
+    color: #FFF; 
+    border-color: #0e94d5; 
+    
+}
+.outBtn {
+    background-color: #177aaa;    
+}
+.fblock {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    
+    border: 3px solid rgb(194, 182, 182);
+    border-radius: 25px;
+}
+.pr {
+    width: 50%;
+}

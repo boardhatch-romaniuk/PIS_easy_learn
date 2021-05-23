@@ -19,7 +19,7 @@ public class HomeServlet extends HttpServlet {
 		List<Subject> list;
 		list = new SubjectDao().findAllSubjects();
 		request.setAttribute("list", list);
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
