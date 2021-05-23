@@ -4,7 +4,34 @@ public class Subject {
 	private int id;
 	private String name;
 	private String description;
+	private String img;
+	private int width;
+	private int height;
 	
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
 	public String getDescription() {
 		return description;
 	}
