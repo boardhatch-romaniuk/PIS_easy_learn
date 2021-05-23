@@ -13,7 +13,7 @@
     <header class="site_header">
         <div class="container">
         <div>
-            <a class="logo" href="/">
+            <a class="logo" href="home">
                 EasyLearn
             </a>
         </div>
